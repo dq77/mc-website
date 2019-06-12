@@ -47,13 +47,10 @@ module.exports={
         })
     ],
     devServer:{
-        /*设置基本目录结构，也就是你想要使用服务的目录地址*/
         contentBase:path.resolve(__dirname,'dist'),
-        /*服务器的IP地址，可以使用IP也可以使用localhost*/
         host:'localhost',
-        /*服务端压缩是否开启，目前开不开都行，想关你就关*/
         compress:true,
-        /*配置服务端口号，建议别用80，很容易被占用，你要是非要用也是可以的。*/
+        open: true,
         port:9090
     },
     resolve:{
