@@ -7,6 +7,9 @@ html,body{
     flex-direction: column;
     font-family: "PingFang SC", "Helvetica Neue", Helvetica, Arial, "Liberation Sans", "Microsoft YaHei";
 }
+.visible-xs-12{
+    display: none!important;
+}
 .header{
     height: 60px;
     box-shadow: 0 2px 10px #DDD;
@@ -370,4 +373,106 @@ body .body-container{
 .aboutgrp .pic-info>p{
     margin-top: 28px;
     font-size: 22px;
+}
+
+/* 移动端适配 */
+@media (max-width: 980px){
+    .visible-xs-12{
+        display: none!important;
+    }
+    .swiper-slide.one .info-title{
+        position: relative;
+        text-align: center;
+        margin-top: 16%;
+    }
+    .swiper-slide.one .phone-pic {
+        display: none;
+    }
+    .swiper-slide.one .download-ar{
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+    }
+    .swiper-slide.two .flex-box .infone, .swiper-slide.three .flex-box .infone{
+        font-size: 16px;
+    }
+    .swiper-slide.two .flex-box .infone span{
+        font-size: 20px;
+    }
+}
+@media (max-width: 767px){
+    .visible-xs-12.flex-box{
+        display: flex!important;
+    }
+    .header .nav-box ul li{
+        padding: 0;
+    }
+    .header .nav-box ul li>a, .header .nav-box ul li>a:hover{
+        padding: 0;
+        width: 60px;
+    }
+    .header .nav-box .toogle{
+        display: none;
+    }
+    .download-ar .box .logo {
+        margin-right: 8px;
+    }
+    .swiper-slide.one .info-title img{
+        width: 108px;
+    }
+    .swiper-slide.one .info-title .tip{
+        margin: 30px;
+        display: block;
+    }
+    .swiper-slide.one .info-title .aword{
+        margin-top: 0;
+        font-size: 18px;
+    }
+    .swiper-slide.one .info-title .aword > span{
+        display: block;
+        font-size: 22px;
+    }
+    .swiper-slide.two h3.title, .swiper-slide.three h3.title{
+        font-size: 24px;
+    }
+    .swiper-slide.two .subtitle, .swiper-slide.three .subtitle{
+        font-size: 18px;
+    }
+    .swiper-slide.two .flex-box .item, .swiper-slide.three .flex-box .item{
+        margin: 0;
+    }
+    .footer{
+        height: 100px;
+    }
+    .footer .fotil {
+        padding-top: 0;
+    }
+    /* About Us */
+    .about-us .container{
+        display: block;
+        height: auto;
+    }
+    .aboutgrp .text-info>h3{
+        padding-bottom: 4px;
+    }
+    .about-us .container .aboutgrp{
+        display: block;
+    }
+    .about-us .container .aboutgrp>div{
+        width: 100%;
+        padding: 15px;
+    }
+    .aboutgrp .text-info>p{
+        margin-top: 15px;
+    }
+    .aboutgrp .pic-info{
+        margin-bottom: 15px;
+    }
+    .aboutgrp .pic-info>p{
+        font-size: 18px;
+    }
+    .notfix.footer{
+        position: static;
+        bottom: auto;
+    }
 }

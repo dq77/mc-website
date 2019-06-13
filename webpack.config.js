@@ -1,8 +1,23 @@
 const path = require('path');
 const htmlPlugin = require('html-webpack-plugin');
+const os = require('os')
 function resolve(dir) {
     return path.join(__dirname, dir)
 }
+
+// 动态获取 host
+let arr = []
+let HOST
+for (let key in os.networkInterfaces()) {
+  os.networkInterfaces()[key].forEach((item) => {
+    if (item.family === 'IPv4' && item.address.indexOf('192.168.') !== -1) {
+      arr.push(item.address)
+    }
+  })
+}
+HOST = arr[0]
+
+
 module.exports={
     entry:{
         entry:'./src/src/index.js'
@@ -47,11 +62,11 @@ module.exports={
         })
     ],
     devServer:{
-        contentBase:path.resolve(__dirname,'dist'),
-        host:'localhost',
-        compress:true,
+        contentBase: path.resolve(__dirname,'dist'),
+        host: HOST,
+        compress: true,
         open: true,
-        port:9090
+        port: 9090
     },
     resolve:{
 
