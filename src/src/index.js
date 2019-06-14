@@ -29,15 +29,11 @@ $(document).ready(function () {
 
   // 悬浮二维码
   $('.download-ar .box').hover(function(){
-    if(!$(this).is(":animated")){
       $(this).children('.qrcode').fadeIn(200)
-      $(this).animate({height:'200px'},200);
-    }
+      $(this).animate({height:'210px'},200);
   },function(){
-    if(!$(this).is(":animated")){
-      $(this).children('.qrcode').fadeOut(200)
-      $(this).animate({height:'60px'},200);
-    }
+      $(this).children('.qrcode').stop().fadeOut(200)
+      $(this).stop().animate({height:'54px'},200);
   })
 
   // 行切换
@@ -48,17 +44,17 @@ $(document).ready(function () {
       $('.swiper-slide.four .item').addClass('normal');
       $(this).removeClass('normal');
 
-      $(this).animate({height:'180px'},200);
-      $(this).children('h3').animate({fontSize:'32px', marginTop: '30px'},200);
-      $(this).children('h3').children('span').animate({fontSize:'40px'},200);
-      $(this).children('p').animate({fontSize:'24px'},200);
+      $(this).stop().animate({height:'180px'},300);
+      $(this).children('h3').stop().animate({fontSize:'32px', marginTop: '30px'},300);
+      $(this).children('h3').children('span').stop().animate({fontSize:'40px'},300);
+      $(this).children('p').stop().animate({fontSize:'24px'},300);
       
-      $('.swiper-slide.four .item.normal').animate({height:'120px'},200);
-      $('.swiper-slide.four .item.normal').children('h3').animate({fontSize:'22px', marginTop: '20px'},200);
-      $('.swiper-slide.four .item.normal').children('h3').children('span').animate({fontSize:'28px'},200);
-      $('.swiper-slide.four .item.normal').children('p').animate({fontSize:'16px'},200);
+      $('.swiper-slide.four .item.normal').stop().animate({height:'120px'},300);
+      $('.swiper-slide.four .item.normal').children('h3').stop().animate({fontSize:'22px', marginTop: '20px'},300);
+      $('.swiper-slide.four .item.normal').children('h3').children('span').stop().animate({fontSize:'28px'},300);
+      $('.swiper-slide.four .item.normal').children('p').stop().animate({fontSize:'16px'},300);
 
-      $('.swiper-slide.four .blank').animate({top: 120*(id-1)+'px'},200,'swing');
+      $('.swiper-slide.four .blank').stop().animate({top: 120*(id-1)+'px'},300,'swing');
 
       // 图片切换
       $('.swiper-slide.four .row-pic img').hide()
