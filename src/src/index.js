@@ -1,4 +1,3 @@
-import './index.css'
 $(document).ready(function () {
 
   var mySwiper = new Swiper ('.swiper-container', {
@@ -44,17 +43,17 @@ $(document).ready(function () {
       $('.swiper-slide.four .item').addClass('normal');
       $(this).removeClass('normal');
 
-      $(this).stop().animate({height:'180px'},300);
+      $(this).stop().animate({height:'200px'},300);
       $(this).children('h3').stop().animate({fontSize:'32px', marginTop: '30px'},300);
       $(this).children('h3').children('span').stop().animate({fontSize:'40px'},300);
       $(this).children('p').stop().animate({fontSize:'24px'},300);
       
-      $('.swiper-slide.four .item.normal').stop().animate({height:'120px'},300);
+      $('.swiper-slide.four .item.normal').stop().animate({height:'130px'},300);
       $('.swiper-slide.four .item.normal').children('h3').stop().animate({fontSize:'22px', marginTop: '20px'},300);
       $('.swiper-slide.four .item.normal').children('h3').children('span').stop().animate({fontSize:'28px'},300);
       $('.swiper-slide.four .item.normal').children('p').stop().animate({fontSize:'16px'},300);
 
-      $('.swiper-slide.four .blank').stop().animate({top: 120*(id-1)+'px'},300,'swing');
+      $('.swiper-slide.four .blank').stop().animate({top: 130*(id-1)+'px'},300,'swing');
 
       // 图片切换
       $('.swiper-slide.four .row-pic img').hide()

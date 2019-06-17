@@ -275,7 +275,7 @@ body .body-container{
 .swiper-slide.four ul .item.normal{
     display: block;
     padding: 10px 0;
-    height: 120px;
+    height: 130px;
     color: #FFF;
 }
 .swiper-slide.four ul .item.normal h3{
@@ -372,6 +372,7 @@ body .body-container{
 }
 .aboutgrp .text-info>p{
     margin-top: 30px;
+    text-indent: 32px;
 }
 .aboutgrp .pic-info{
     background-image: url(./img/aboutus.png);
